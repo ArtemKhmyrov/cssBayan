@@ -1,3 +1,3 @@
 # cssBayan
 
-[Open-html-page](file:///C:/Users/ahmyr/Desktop/cssBayan/src/index.html)
+[Open-html-page](https://artemkhmyrov.github.io/cssBayan/src/index.html)
