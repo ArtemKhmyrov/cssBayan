@@ -26,7 +26,7 @@ ol {
 
 .container {
     margin-top: 10rem;
-    width: 50rem;
+    width: 60rem;
     min-height: 100rem;
 }
 
@@ -45,10 +45,22 @@ ol {
 }
 
 .accordion__title {
+    display: flex;
     padding: 1rem 0rem;
     font-size: 2.4rem;
     font-weight: 600;
     color: blue;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion__title_icon {
+    display: block;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease-in-out;
+    width: 3rem;
+    height: 3rem;
 }
 
 .accordion__content{
@@ -84,6 +96,11 @@ ol {
     transition: height 0.5s ease-in-out, opacity .5s ease-in-out;
 }
 
+.accordion__item:hover .accordion__title_icon{
+    transform: rotate(45deg);
+    transition: 1s;
+}
+
 .accordion__radio:checked ~ label .accordion__content, label .accordion__content img{
     max-height: 50rem;
     overflow: visible;
@@ -92,6 +109,10 @@ ol {
     transition: height 0.5s ease-in-out, opacity 2s ease-in-out;
 }
 
+.accordion__radio:checked ~ label .accordion__title_icon{
+    transform: rotate(45deg);
+    transition: 1s;
+}
 
 .accordion__radio:checked ~ label .accordion__title{
     color: black;
@@ -99,4 +120,10 @@ ol {
 
 .accordion__list:hover .accordion__title{
     color: black;
+}
+
+.accordion__list:hover .accordion__title_icon {
+    opacity: 1;
+    overflow: visible;
+    transition: opacity 0.5s ease-in-out;
 }
